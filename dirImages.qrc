@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icones/salvar.png</file>
+        <file>icones/editar.png</file>
+        <file>icones/pesquisar.png</file>
+        <file>icones/adicionar.png</file>
+        <file>icones/deletar.png</file>
+        <file>icones/sair.png</file>
+        <file>icones/abrir.png</file>
+        <file>icones/colar.png</file>
+        <file>icones/copiar.png</file>
+        <file>icones/desfazer.png</file>
+        <file>icones/refazer.png</file>
+        <file>icones/cortar.png</file>
+        <file>icones/info.png</file>
+        <file>icones/save-file.png</file>
+        <file>icones/salvarComo.png</file>
+        <file>icones/formatar.png</file>
+        <file>icones/cor.png</file>
+    </qresource>
+</RCC>

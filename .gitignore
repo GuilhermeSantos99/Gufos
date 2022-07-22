@@ -1,0 +1,7 @@
+Gufos
+*.o
+*.stash
+moc_predefs.h
+moc_textgufo.cpp
+qrc_dirImages.cpp
+ui_textgufo.h
