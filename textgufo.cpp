@@ -8,6 +8,8 @@
 #include <QFont>
 #include <QColorDialog>
 #include <QColor>
+#include <iostream>
+#include <typeinfo>
 
 textGufo::textGufo(QWidget *parent)
     : QMainWindow(parent)
@@ -46,9 +48,21 @@ void textGufo::on_actionAbrir_triggered()
 
 void textGufo::on_actionNovo_triggered()
 {
-    localArquivo = "";
-    ui->textEdit->clear();
-    ui->textEdit->setFocus();
+/*    bool coisa = QMessageBox::question(this, "Atenção",
+                                       "Deseja salvar atual arquivo antes de abrir um novo?");                           );
+
+    if(!coisa){
+        std::cout << "Desjo salvar" << std::endl;
+    }else
+    {
+        std::cout << "Não desejo salvar" << std::endl;
+    }
+
+*/
+        localArquivo = "";
+        ui->textEdit->clear();
+        ui->textEdit->setFocus();
+
 }
 
 
@@ -78,7 +92,8 @@ void textGufo::on_actionSalvar_triggered()
 
     QFile arquivo(localArquivo);
 
-    if(!arquivo.open(QFile::WriteOnly | QFile::Text)){
+    if(!arquivo.open(QFile::WriteOnly | QFile::Text))
+    {
         QMessageBox::warning(this, "Aviso", "Não foi possível salvar o arquivo");
         return;
     }
@@ -143,7 +158,8 @@ void textGufo::on_actionFonte_triggered()
 void textGufo::on_actionCor_da_fonte_triggered()
 {
     QColor cor = QColorDialog::getColor(Qt::black, this, "Escolha uma cor");
-    if(cor.isValid()){
+    if(cor.isValid())
+    {
         ui->textEdit->setTextColor(cor);
     }
 }
@@ -152,7 +168,8 @@ void textGufo::on_actionCor_da_fonte_triggered()
 void textGufo::on_actionCor_de_fundo_triggered()
 {
     QColor cor = QColorDialog::getColor(Qt::white, this, "Escolha uma cor");
-    if(cor.isValid()){
+    if(cor.isValid())
+    {
         ui->textEdit->setTextBackgroundColor(cor);
     }
 }
