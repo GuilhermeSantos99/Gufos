@@ -48,21 +48,21 @@ void textGufo::on_actionAbrir_triggered()
 
 void textGufo::on_actionNovo_triggered()
 {
-/*    bool coisa = QMessageBox::question(this, "Atenção",
-                                       "Deseja salvar atual arquivo antes de abrir um novo?");                           );
 
-    if(!coisa){
-        std::cout << "Desjo salvar" << std::endl;
+    QMessageBox::StandardButton resposta = QMessageBox::question(this, "Atenção",
+                                                                 "Deseja salvar arquivo atual antes de abrir um novo",
+                                                                 QMessageBox::Yes | QMessageBox::No);
+
+    if(resposta == QMessageBox::Yes)
+    {
+        on_actionSalvar_como_triggered();
+
     }else
     {
-        std::cout << "Não desejo salvar" << std::endl;
-    }
-
-*/
         localArquivo = "";
         ui->textEdit->clear();
         ui->textEdit->setFocus();
-
+    }
 }
 
 
