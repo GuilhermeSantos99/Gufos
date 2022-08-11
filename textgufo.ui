@@ -18,6 +18,9 @@
   <property name="windowTitle">
    <string>textGufo</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color { rgb(255, 217, 29)}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
